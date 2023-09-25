@@ -20,7 +20,7 @@ export const FileUpload = ({
 }: FileUploadProps) =>{
     const fileType = value?.split(".").pop();
 
-    if (value && fileType !=="pdf"){
+    if (value  && fileType !=="pdf"){
         return (
             <div className="relative h-20 w-20">
                 <Image 
@@ -29,6 +29,9 @@ export const FileUpload = ({
                 alt="Upload"
                 className="rounded-full"
                 />
+                <button>
+                    <X />
+                </button>
             </div>
         )
     }
@@ -43,5 +46,7 @@ export const FileUpload = ({
             console.log(error);
         }}
         />
-    )
-}
+    )}
+
+
+
